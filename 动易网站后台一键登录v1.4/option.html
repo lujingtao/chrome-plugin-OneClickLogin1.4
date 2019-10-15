@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="UTF-8">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>动易网站后台一键登录 - 大话主席</title>
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript" src="option.js"></script>
+ <link type="text/css" rel="stylesheet" href="option.css">
+</head>
+
+<body>
+<h1>动易网站后台一键登录配置v1.4 - 大话主席</h1>
+
+
+
+<div id="divRecordlist">
+
+	<!-- 设置默认登录帐号密码 -->
+	<div class="defaultInfo">
+		<div class="hd">
+			<a class="close">[收起]</a>
+			<h3>默认登录帐号密码设置</h3>
+		</div>
+		<div class="bd">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr class="title">
+					<td class="sys"></td>
+					<td class="user">默认帐号</td>
+					<td class="pwd">默认密码</td>
+					<td class="code">默认验证码</td>
+				</tr>
+				<tr>
+					<td class="sys">旧系统</td>
+					<td class="user"><input type="text" id="oldUser" /></td>
+					<td class="pwd"><input type="text" id="oldPwd" /></td>
+					<td class="code"><input type="text" id="oldCode" /></td>
+				</tr>
+				<tr>
+					<td class="sys">新系统</td>
+					<td class="user"><input type="text" id="newUser" /></td>
+					<td class="pwd"><input type="text" id="newPwd" /></td>
+					<td class="code"><input type="text" id="newCode" /></td>
+				</tr>
+			</table>
+
+			<div class="others">
+				<button id="saveDefault">保存/修改</button>
+				<p class="notice">登录后台时如果没有对应记录则会使用默认帐号密码登录</p>
+			</div>
+			
+		</div>
+	</div>
+
+	<table id="tabRecordlist" class="Dtable" cellspacing="0" cellpadding="0">
+		<tr class="title">
+			<td class="n">网站名称</td><td class="u">后台登录网址</td><td class="d">管理员名称</td>
+			<td class="d"><label for="viewPwd">密  码</label><input type="checkbox" name="viewPwd" id="viewPwd" checked="checked"/></td><td class="d">验证码</td><td class="c">操  作</td>
+		</tr>
+		<tr id="trOperation">
+			<td><input type="text" id="txtSiteName" title="网站名称必填" /></td>
+			<td><input type="text" id="txtUrl" title="网址必填"  value="http://" /></td>
+			<td><input type="text" id="txtUserName" title="用户名必填" /></td>
+			<td><input type="text" id="txtPwd" title="密码必填" /></td>
+			<td><input type="text" id="txtCode" title="验证码选填" /></td>
+			<td class='op'>
+				<a class="save" >添加</a>
+			</td>
+		</tr>
+	</table>
+	<div class="fun">
+		<a href="#" class="top">[返回顶部]</a>
+		<a id="exporting">[ 导 出 ]</a> &nbsp; <a id="importing">[ 导 入 ]</a> &nbsp; <a id="backup">[ 明文备份 ]</a>
+	</div>
+	<div id="divMessage" name="divMessage"></div>
+
+</div>
+</body>
+</html>
+
